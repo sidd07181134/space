@@ -15,14 +15,16 @@ body {
     width: 500px;
     height: 500px;
     top: 10%;
+    left: 2%;
     filter: drop-shadow(0 0 10px lightgreen);
     box-shadow: 0 0 5px 5px rgba(29, 238, 43, 0.5);
 }
 
-.planet > h1 {
+.title {
     position: absolute;
     font-size: 3em;
     left: 10%;
+    top: -3%;
 }
 
 .information {
@@ -52,8 +54,8 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 #appear {
