@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("img/space_background.jpg");
     margin:0px;
     padding:0px;
@@ -9,7 +9,7 @@ body{
     background-position: center center;
 }
 
-#textBox{
+#textBox {
     font-family: 'Courier New', monospace;
     font-weight:bold;
     color:rgb(55, 175, 55);
@@ -21,13 +21,13 @@ body{
     right:100px;
 }
 
-#textBox span{
+#textBox span {
     text-align:center;
     font-style:underline;
     font-size: 25px;;
 }
 
-#planet1 img{
+#RingPlanet img {
     width:170px;
     height:auto;
     position:absolute;
@@ -35,7 +35,7 @@ body{
     right:90px;
 }
 
-#RedPlanet img{
+#RedPlanet img {
     width:250px;
     height:auto;
     position:absolute;
@@ -43,7 +43,7 @@ body{
     right:375;
 }
 
-#TanPlanet img{
+#TanPlanet img {
     width:380px;
     height:auto;
     position:absolute;
@@ -51,7 +51,7 @@ body{
     left:50px;
 }
 
-#EarthPlanet img{
+#EarthPlanet img {
     width:230px;
     height:auto;
     position:absolute;
@@ -59,7 +59,7 @@ body{
     right:725px;
 }
 
-#BluePlanet img{
+#BluePlanet img {
     width:120px;
     height:auto;
     position:absolute;
@@ -67,7 +67,7 @@ body{
     left:600px;
 }
 
-#Fuel{
+#Fuel {
     position: absolute;
     top:30;
     left:50px;
@@ -78,7 +78,7 @@ body{
     width:400px;
 }
 
-#Fuel img{
+#Fuel img {
     position:relative;
     bottom:185px;
     right:60px;

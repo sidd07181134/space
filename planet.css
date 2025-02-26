@@ -1,5 +1,5 @@
 body {
-    background-image: url('space_background.jpg');
+    background-image: url('img/space_background.jpg');
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -46,7 +46,15 @@ body {
     transform: rotate(12deg);
 }
 
-.appear-in-5-seconds {
+.back {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+}
+
+#appear {
     opacity: 0;
     animation: appear 0s 6.5s forwards;
 }
