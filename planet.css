@@ -12,7 +12,7 @@ body {
 
 .planet > img {
     position: absolute;
-    width: 500px;
+    width: auto;
     height: 500px;
     top: 10%;
     left: 2%;
@@ -30,7 +30,7 @@ body {
 .information {
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 72%;
     transform: translate(-50%, -50%);
     width: 50%;
     height: 25%;
