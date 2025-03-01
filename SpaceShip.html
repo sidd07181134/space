@@ -1,52 +1,69 @@
-<html> 
-<head> 
-<title>Space Game!</title> 
-<link rel="icon" type="image/x-icon" href="img/spaceship.png">
-<link rel="stylesheet" type="text/css" media="all" href="main.css">
-</head> 
-<body> 
-<!-- Test Comment -->
-    <div id="RingPlanet">
-        <a href="planets/ring_planet.html">
-            <img src="img/ring_planet.png" alt="Planet">
-        </a>
-    </div>
-    <div id="RedPlanet">
-        <a href="planets/red_planet.html">
-            <img src="img/red_planet.png" alt="Planet">
-        </a>
-    </div>
-    <div id="TanPlanet">
-        <a href="planets/tan_planet.html">
-            <img src="img/tan_planet.png" alt="Planet">
-        </a>
-    </div>
-    <div id="EarthPlanet">
-        <a href="planets/earth_planet.html">
-            <img src="img/earth_planet.png" alt="Planet">
-        </a>
-    </div>
-    <div id="BluePlanet">
-        <a href="planets/blue_planet.html">
-            <img src="img/blue_planet.png" alt="Planet">
-        </a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Game!</title>
+    <link rel="icon" type="image/x-icon" href="img/spaceship.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
 
     <div id="Fuel">
         <img src="img/battery_gif.webp" alt="Fuel Meter">
     </div>
 
-
-    <div id="TextBox">
-        <span>Planet Name</span><br>
-        This is a summary about this planet. Blah blah blah
-        Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
-        Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
-        Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah
+    <!-- Planets -->
+    <div class="planet-container" id="RingPlanet" onmouseover="showText('Ring Planet', 'A gas giant with beautiful rings.')">
+        <a href="planets/ring_planet.html">
+            <img src="img/ring_planet.png" alt="Ring Planet">
+        </a>
     </div>
 
+    <div class="planet-container" id="RedPlanet" onmouseover="showText('Red Planet', 'A rocky desert world with massive dust storms.')">
+        <a href="planets/red_planet.html">
+            <img src="img/red_planet.png" alt="Red Planet">
+        </a>
+    </div>
 
+    <div class="planet-container" id="TanPlanet" onmouseover="showText('Tan Planet', 'A planet with vast canyons and thick clouds.')">
+        <a href="planets/tan_planet.html">
+            <img src="img/tan_planet.png" alt="Tan Planet">
+        </a>
+    </div>
 
+    <div class="planet-container" id="EarthPlanet" onmouseover="showText('Earth-like Planet', 'A habitable world teeming with life.')">
+        <a href="planets/earth_planet.html">
+            <img src="img/earth_planet.png" alt="Earth Planet">
+        </a>
+    </div>
 
-</body> 
-</html> 
+    <div class="planet-container" id="BluePlanet" onmouseover="showText('Blue Ice Planet', 'A frozen world with icy oceans.')">
+        <a href="planets/blue_planet.html">
+            <img src="img/blue_planet.png" alt="Blue Planet">
+        </a>
+    </div>
+
+    <!-- Single TextBox (Bottom Right) -->
+    <div id="TextBox">
+        <strong id="PlanetTitle">Planet Name</strong><br>
+        <span id="PlanetDescription">This is a summary about this planet.</span>
+    </div>
+
+    <script>
+        function showText(title, description) {
+            document.getElementById("PlanetTitle").innerText = title;
+            document.getElementById("PlanetDescription").innerText = description;
+            document.getElementById("TextBox").style.display = "block";
+        }
+
+        document.body.addEventListener("mousemove", function(event) {
+            if (!event.target.closest(".planet-container")) {
+                document.getElementById("TextBox").style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
+
