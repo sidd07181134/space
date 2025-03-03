@@ -10,66 +10,50 @@ body {
     background-position: center center;
 }
 
-/* Text Box */
-#textBox {
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    color: rgb(55, 175, 55);
-    background-color: rgb(51, 51, 51);
-    border: rgb(126, 126, 126) 4px solid;
-    width: 350px;
+/* Planet Containers */
+.planet-container {
     position: absolute;
-    bottom: 50px;
-    right: 100px;
-    display: none; /* Hidden by default */
-    padding: 10px;
 }
 
-#textBox span {
-    text-align: center;
-    font-size: 25px;
-    text-decoration: underline;
-}
-
-/* Individual Planet Sizes & Positions */
-#RingPlanet img {
-    width: 170px;
-    height: auto;
-    position: absolute;
+/* Planet Sizes & Positions */
+#RingPlanet {
     top: 100px;
     right: 90px;
 }
+#RingPlanet img {
+    width: 170px;
+}
 
-#RedPlanet img {
-    width: 250px;
-    height: auto;
-    position: absolute;
+#RedPlanet {
     top: 100px;
     right: 375px;
 }
+#RedPlanet img {
+    width: 250px;
+}
 
-#TanPlanet img {
-    width: 380px;
-    height: auto;
-    position: absolute;
+#TanPlanet {
     top: 280px;
     left: 50px;
 }
+#TanPlanet img {
+    width: 380px;
+}
 
-#EarthPlanet img {
-    width: 230px;
-    height: auto;
-    position: absolute;
+#EarthPlanet {
     bottom: 100px;
     right: 725px;
 }
+#EarthPlanet img {
+    width: 230px;
+}
 
-#BluePlanet img {
-    width: 120px;
-    height: auto;
-    position: absolute;
+#BluePlanet {
     top: 70px;
     left: 600px;
+}
+#BluePlanet img {
+    width: 120px;
 }
 
 /* Fuel Meter */
@@ -83,14 +67,32 @@ body {
     height: 120px;
     width: 400px;
 }
-
 #Fuel img {
     position: relative;
     bottom: 185px;
     right: 60px;
 }
 
-/* Show TextBox When Hovering Over Any Planet */
-.planet-container:hover ~ #TextBox {
+/* Text Boxes (Hidden by Default) */
+.textBox {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: rgb(55, 175, 55);
+    background-color: rgb(51, 51, 51);
+    border: rgb(126, 126, 126) 4px solid;
+    width: 350px;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    padding: 10px;
+    display: none;
+}
+
+/* Show Different Text Box on Hover */
+#RingPlanet:hover ~ #RingPlanetText,
+#RedPlanet:hover ~ #RedPlanetText,
+#TanPlanet:hover ~ #TanPlanetText,
+#EarthPlanet:hover ~ #EarthPlanetText,
+#BluePlanet:hover ~ #BluePlanetText {
     display: block;
 }
