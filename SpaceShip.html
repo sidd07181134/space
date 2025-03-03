@@ -58,6 +58,10 @@
     <div id="textBox">
         <span id="PlanetTitle">Planet Name</span><br>
         <p id="PlanetDescription">This is a summary about this planet.</p>
+    <!-- TextBox (Hidden by Default) -->
+    <div id="textBox">
+        <span id="PlanetTitle">Planet Name</span><br>
+        <p id="PlanetDescription">This is a summary about this planet.</p>
     </div>
 
     <script>
@@ -65,8 +69,12 @@
             document.getElementById("PlanetTitle").innerText = title;
             document.getElementById("PlanetDescription").innerText = description;
             document.getElementById("textBox").style.display = "block";
+            document.getElementById("textBox").style.display = "block";
         }
 
+        function hideText() {
+            document.getElementById("textBox").style.display = "none";
+        }
         function hideText() {
             document.getElementById("textBox").style.display = "none";
         }
