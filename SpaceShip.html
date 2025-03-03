@@ -14,56 +14,63 @@
     </div>
 
     <!-- Planets -->
-    <div class="planet-container" id="RingPlanet" onmouseover="showText('Ring Planet', 'A gas giant with beautiful rings.')">
+    <div class="planet-container" id="RingPlanet" 
+         onmouseover="showText('Calypso', 'The first planet humans found alien life on. All data shows that such life has ceased to exist, but many scientists believe there were civilizations thriving here before humans even touched space.')" 
+         onmouseout="hideText()">
         <a href="planets/ring_planet.html">
             <img src="img/ring_planet.png" alt="Ring Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="RedPlanet" onmouseover="showText('Red Planet', 'A rocky desert world with massive dust storms.')">
+    <div class="planet-container" id="RedPlanet" 
+         onmouseover="showText('Hoxes', 'Despite its barren surface, the planet is said to remain rich in resources, specifically gold and a fuel resource known as morkite. It’s also been known that the mines are infested with bugs. Many believe they must be protecting something.')" 
+         onmouseout="hideText()">
         <a href="planets/red_planet.html">
             <img src="img/red_planet.png" alt="Red Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="TanPlanet" onmouseover="showText('Tan Planet', 'A planet with vast canyons and thick clouds.')">
+    <div class="planet-container" id="TanPlanet" 
+         onmouseover="showText('Oasis', 'A playground for nearby militaries. This massive planet has no resources of value and no sign of life and because of it, its entirely sand surface has become a testing ground for weapons.')" 
+         onmouseout="hideText()">
         <a href="planets/tan_planet.html">
             <img src="img/tan_planet.png" alt="Tan Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="EarthPlanet" onmouseover="showText('Earth-like Planet', 'A habitable world teeming with life.')">
+    <div class="planet-container" id="EarthPlanet" 
+         onmouseover="showText('Earth 01', 'The Planet of the old world. Many say this is where human civilization began. Many come here searching for antiques and history of those that came before them.')" 
+         onmouseout="hideText()">
         <a href="planets/earth_planet.html">
             <img src="img/earth_planet.png" alt="Earth Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="BluePlanet" onmouseover="showText('Blue Ice Planet', 'A frozen world with icy oceans.')">
+    <div class="planet-container" id="BluePlanet" 
+         onmouseover="showText('Malevelon', 'This planet has been ravaged by the evil and undemocratic Automatons. Their machines and factories have left massive craters upon the surface as they have mined the planet to its core in search of more resources.')" 
+         onmouseout="hideText()">
         <a href="planets/blue_planet.html">
             <img src="img/blue_planet.png" alt="Blue Planet">
         </a>
     </div>
 
-    <!-- Single TextBox (Bottom Right) -->
-    <div id="TextBox">
-        <strong id="PlanetTitle">Planet Name</strong><br>
-        <span id="PlanetDescription">This is a summary about this planet.</span>
+    <!-- TextBox (Hidden by Default) -->
+    <div id="textBox">
+        <span id="PlanetTitle">Planet Name</span><br>
+        <p id="PlanetDescription">This is a summary about this planet.</p>
     </div>
 
     <script>
         function showText(title, description) {
             document.getElementById("PlanetTitle").innerText = title;
             document.getElementById("PlanetDescription").innerText = description;
-            document.getElementById("TextBox").style.display = "block";
+            document.getElementById("textBox").style.display = "block";
         }
 
-        document.body.addEventListener("mousemove", function(event) {
-            if (!event.target.closest(".planet-container")) {
-                document.getElementById("TextBox").style.display = "none";
-            }
-        });
+        function hideText() {
+            document.getElementById("textBox").style.display = "none";
+        }
     </script>
 
 </body>
 </html>
-
