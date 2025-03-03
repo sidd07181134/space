@@ -13,72 +13,61 @@
         <img src="img/battery_gif.webp" alt="Fuel Meter">
     </div>
 
-    <!-- Planets -->
-    <div class="planet-container" id="RingPlanet" 
-         onmouseover="showText('Calypso', 'The first planet humans found alien life on. All data shows that such life has ceased to exist, but many scientists believe there were civilizations thriving here before humans even touched space.')" 
-         onmouseout="hideText()">
+    <div class="planet-container" id="RingPlanet">
         <a href="planets/ring_planet.html">
             <img src="img/ring_planet.png" alt="Ring Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="RedPlanet" 
-         onmouseover="showText('Hoxes', 'Despite its barren surface, the planet is said to remain rich in resources, specifically gold and a fuel resource known as morkite. It’s also been known that the mines are infested with bugs. Many believe they must be protecting something.')" 
-         onmouseout="hideText()">
+    <div class="planet-container" id="RedPlanet">
         <a href="planets/red_planet.html">
             <img src="img/red_planet.png" alt="Red Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="TanPlanet" 
-         onmouseover="showText('Oasis', 'A playground for nearby militaries. This massive planet has no resources of value and no sign of life and because of it, its entirely sand surface has become a testing ground for weapons.')" 
-         onmouseout="hideText()">
+    <div class="planet-container" id="TanPlanet">
         <a href="planets/tan_planet.html">
             <img src="img/tan_planet.png" alt="Tan Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="EarthPlanet" 
-         onmouseover="showText('Earth 01', 'The Planet of the old world. Many say this is where human civilization began. Many come here searching for antiques and history of those that came before them.')" 
-         onmouseout="hideText()">
+    <div class="planet-container" id="EarthPlanet">
         <a href="planets/earth_planet.html">
             <img src="img/earth_planet.png" alt="Earth Planet">
         </a>
     </div>
 
-    <div class="planet-container" id="BluePlanet" 
-         onmouseover="showText('Malevelon', 'This planet has been ravaged by the evil and undemocratic Automatons. Their machines and factories have left massive craters upon the surface as they have mined the planet to its core in search of more resources.')" 
-         onmouseout="hideText()">
+    <div class="planet-container" id="BluePlanet">
         <a href="planets/blue_planet.html">
             <img src="img/blue_planet.png" alt="Blue Planet">
         </a>
     </div>
 
-    <!-- TextBox (Hidden by Default) -->
-    <div id="textBox">
-        <span id="PlanetTitle">Planet Name</span><br>
-        <p id="PlanetDescription">This is a summary about this planet.</p>
-    <!-- TextBox (Hidden by Default) -->
-    <div id="textBox">
-        <span id="PlanetTitle">Planet Name</span><br>
-        <p id="PlanetDescription">This is a summary about this planet.</p>
+    <!-- Text Boxes (One for Each Planet) -->
+    <div class="textBox" id="RingPlanetText">
+        <span>Calypso</span><br>
+        The first planet humans found alien life on. All data shows that such life has ceased to exist, but many scientists believe there were civilizations thriving here before humans even touched space.
     </div>
 
-    <script>
-        function showText(title, description) {
-            document.getElementById("PlanetTitle").innerText = title;
-            document.getElementById("PlanetDescription").innerText = description;
-            document.getElementById("textBox").style.display = "block";
-            document.getElementById("textBox").style.display = "block";
-        }
+    <div class="textBox" id="RedPlanetText">
+        <span>Hoxes</span><br>
+        Despite its barren surface, the planet is said to remain rich in resources, specifically gold and a fuel resource known as morkite. It’s also been known that the mines are infested with bugs. Many believe they must be protecting something.
+    </div>
 
-        function hideText() {
-            document.getElementById("textBox").style.display = "none";
-        }
-        function hideText() {
-            document.getElementById("textBox").style.display = "none";
-        }
-    </script>
+    <div class="textBox" id="TanPlanetText">
+        <span>Oasis</span><br>
+        A playground for nearby militaries. This massive planet has no resources of value and no sign of life and because of it, its entirely sand surface has become a testing ground for weapons.
+    </div>
+
+    <div class="textBox" id="EarthPlanetText">
+        <span>Earth 01</span><br>
+        The Planet of the old world. Many say this is where human civilization began. Many come here searching for antiques and history of those that came before them.
+    </div>
+
+    <div class="textBox" id="BluePlanetText">
+        <span>Malevelon</span><br>
+        This planet has been ravaged by the evil and undemocratic Automatons. Their machines and factories have left massive craters upon the surface as they have mined the planet to its core in search of more resources.
+    </div>
 
 </body>
 </html>
